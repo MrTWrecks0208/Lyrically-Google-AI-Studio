@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main: #030712;
+  --color-main-dark: #010208;
+  --color-accent: #db2777;
+  --color-accent-light: #f472b6;
+  
+  --color-[#db2777]: #db2777;
+  
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
+  --color-pink-600: #db2777;
+  --color-pink-700: #be185d;
+  --color-pink-800: #9d174d;
+  --color-pink-900: #831843;
+  
+  --color-rose-50: #f2faff;
+  --color-rose-100: #e2f4ff;
+  --color-rose-200: #bee6ff;
+  --color-rose-300: #84d2ff;
+  --color-rose-400: #41BDF3;
+  --color-rose-500: #21adeb;
+  --color-rose-600: #109cd7;
+  --color-rose-700: #0a7fad;
+  --color-rose-800: #096a8f;
+  --color-rose-900: #0d5877;
+}
+
+/* Custom styles */
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-wave {
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  10% {
+    width: 15%;
+  }
+  30% {
+    width: 40%;
+  }
+  60% {
+    width: 65%;
+  }
+  80% {
+    width: 85%;
+  }
+  95% {
+    width: 95%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progress 8s cubic-bezier(0.1, 0.4, 0.2, 1) forwards;
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
